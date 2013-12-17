@@ -1,4 +1,6 @@
-codingbat
+CodingBat
 =========
 
-Solutions to CodingBat problems
+Solutions to CodingBat problems.
+
+http://codingbat.com
