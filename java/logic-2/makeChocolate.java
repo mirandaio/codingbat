@@ -4,10 +4,7 @@
  * can't be done.
  */
 public int makeChocolate(int small, int big, int goal) {
-    int count = 5 * big > goal ? goal - (goal % 5) : 5 * big;
-      
-    if(goal - count <= small)
-        return goal - count;
-                
-    return -1;
+    int remainder = goal >= 5 * big ? goal - (5 * big) : goal % 5;
+    
+    return remainder <= small ? remainder : -1;
 }
