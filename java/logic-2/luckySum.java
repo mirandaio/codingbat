@@ -3,17 +3,14 @@
  * not count. So for example, if b is 13, then both b and c do not count.
  */
 public int luckySum(int a, int b, int c) {
-    int sum = 0;
-    
-    if(a != 13) {
-        sum += a;
-        if(b != 13) {
-            sum += b;
-            if(c != 13) {
-                sum += c;
-            }
-        }
-    }
-                                                  
-    return sum;
+    if(a == 13)
+        return 0;
+           
+    if(b == 13)
+        return a;
+                     
+    if(c == 13)
+        return a + b;
+                               
+    return a + b + c;
 }
