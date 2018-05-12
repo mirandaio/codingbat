@@ -3,9 +3,9 @@
  */
 public int max1020(int a, int b) {
     if(b > a) {
-        a = a + b;
-        b = a - b;
-        a = a - b;
+       int temp=a;
+        a=b;
+        b=temp;
     }
                   
     if(10 <= a && a <= 20)
