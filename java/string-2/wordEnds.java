@@ -4,26 +4,17 @@
  * a char may be included twice if it is between two words.
  */
 public String wordEnds(String str, String word) {
-    StringBuffer result = new StringBuffer();
-    int i = 0;
-      
-    if(str.length() >= word.length() + 1 && 
-        str.substring(0, word.length()).equals(word)) {
-        i = word.length() - 1;
-        result.append(str.charAt(i + 1));
-    }
-                        
-    while(i < str.length() - word.length()) {
-        if(str.substring(i + 1, i + 1 + word.length()).equals(word)) {
-            result.append(str.charAt(i));
-            i = i + word.length();
-            if(i < str.length() - 1) {
-                result.append(str.charAt(i + 1));
-            }
-        } else {
-            i++;
-        }
-    }
-                                                                                
-    return result.toString();
+    int sl = str.length();
+    int wl = word.length();
+    String newstr = "";
+
+for (int i=0; i<=sl-wl; i++) 
+{ 
+  if (i>0 && str.substring(i,i+wl).equals(word))
+    newstr = newstr+str.charAt(i-1);
+    
+  if (i < sl-wl && str.substring(i,i+wl).equals(word))
+    newstr += str.charAt(i+wl);
+}
+return newstr;
 }
