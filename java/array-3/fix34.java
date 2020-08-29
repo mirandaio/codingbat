@@ -17,9 +17,8 @@ public int[] fix34(int[] nums) {
                             
     while(i < nums.length) {
         if(nums[i] == 3) {
-            int temp = nums[i+1];
-            nums[i+1] = nums[j];
-            nums[j] = temp;
+            nums[j] = nums[i+1];
+            nums[i+1] = 4;
                                                           
             while(j < nums.length && nums[j] != 4)
                 j++;
