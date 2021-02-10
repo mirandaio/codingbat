@@ -14,7 +14,8 @@ public int maxMirror(int[] nums) {
                 count++;
             } else {
                 max = Math.max(max, count);
-                count = 0;
+                j += count;
+		count = 0;
             }
         }
                                                                 
