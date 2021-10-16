@@ -5,7 +5,7 @@
  * vacation -- then on weekdays it should be "10:00" and weekends it should 
  * be "off".
  */
-public String alarmClock(int day, boolean vacation) {
+public static String alarmClock(int day, boolean vacation) {
     if(vacation) {
         if(day == 0 || day == 6)
             return "off";
